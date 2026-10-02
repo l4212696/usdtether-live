@@ -16,7 +16,7 @@
  <span class=nav-logo-text>usdt<span>ether</span>
  </span></a>
   <div class=nav-right>
-  <a href=/careers class="nav-link">Careers</a>
+  <a href="careers/" class="nav-link" id="careers-link">Careers</a>
   <a href=https://t.me/usdtetherlive class=nav-cta>Contact</a>
   </div>
 </nav>
@@ -273,3 +273,11 @@
 <div class="modal-overlay sf-hidden" id=modal-donate>
  
 </div>
+
+<script>
+// Opened straight from disk (file://)? Folders don't auto-serve index.html there, so point at the file.
+(function(){
+  var a = document.getElementById('careers-link');
+  if (a && location.protocol === 'file:') a.setAttribute('href', 'careers/index.html');
+})();
+</script>
